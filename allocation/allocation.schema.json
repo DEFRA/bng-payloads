@@ -50,13 +50,6 @@
             "planningReference"
           ]
         },
-        "additionalEmailAddresses": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "email"
-          }
-        },
         "biodiversityGainSiteNumber": {
           "type": "string"
         },
@@ -542,7 +535,6 @@
       "required": [
         "applicant",
         "developmentDetails",
-        "additionalEmailAddresses",
         "biodiversityGainSiteNumber",
         "metricData",
         "referenceNumber",
