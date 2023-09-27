@@ -8,13 +8,13 @@ Repository to store Biodiversity Net Gains (BNG) payload schemas and examples.
 | File                          	| Current Version 	| Description                                    	|
 |-------------------------------	|-----------------	|------------------------------------------------	|
 | registration.schema.json        	| V0.1            	| JSON schema for a landowner registration payload 	|
-| registration.order.example.json 	| V0.1            	| Example registration payload   	|
+| registration.example.json 	| V0.1            	| Example registration payload   	|
 
 ### Allocation (Developer Journey)
 | File                          	| Current Version 	| Description                                    	|
 |-------------------------------	|-----------------	|------------------------------------------------	|
 | allocation.schema.json        	| V0.1            	| JSON schema for a developer allocation payload 	|
-| allocation.order.example.json 	| V0.1            	| Example allocation payload       	|
+| allocation.example.json 	| V0.1            	| Example allocation payload       	|
 
 ### Credits
 
