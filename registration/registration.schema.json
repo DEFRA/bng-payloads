@@ -92,28 +92,9 @@
           "type": "string",
           "format": "date-time"
         },
-        "otherLandowners": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        "managementMonitoringStartDate": {
-          "type": "string",
-          "format": "date-time"
-        },
         "submittedOn": {
           "type": "string",
           "format": "date-time"
-        },
-        "landownerConsent": {
-          "type": "string",
-          "enum": ["true", "false"]
         },
         "metricData": {
           "type": "object",
@@ -475,10 +456,7 @@
         "legalAgreementParties",
         "legalAgreementType",
         "legalAgreementStartDate",
-        "otherLandowners",
-        "managementMonitoringStartDate",
         "submittedOn",
-        "landownerConsent",
         "metricData",
         "payment"
       ]

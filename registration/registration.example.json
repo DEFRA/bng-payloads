@@ -65,17 +65,7 @@
     ],
     "legalAgreementType": "759150001",
     "legalAgreementStartDate": "2022-01-01T00:00:00.000Z",
-    "otherLandowners": [
-      {
-        "name": "Landowner Name 1"
-      },
-      {
-        "name": "Landowner Name 2"
-      }
-    ],
-    "managementMonitoringStartDate": "2022-01-01T00:00:00.000Z",
     "submittedOn": "2023-09-08T08:42:25.804Z",
-    "landownerConsent": "true",
     "metricData": {
       "d1": [
         {
