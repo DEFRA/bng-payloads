@@ -8,7 +8,7 @@
     "creditsPurchase": {
       "type": "object",
       "properties": {
-        "customer": {
+        "applicant": {
           "type": "object",
           "properties": {
             "id": {
@@ -186,7 +186,7 @@
         }
       },
       "required": [
-        "customer",
+        "applicant",
         "development",
         "products",
         "files"
