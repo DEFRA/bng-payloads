@@ -1,11 +1,8 @@
 {
   "creditsPurchase": {
-    "customer": {
+    "applicant": {
       "id": "123456",
       "nationality": "British",
-      "firstName": "Joe",
-      "lastName": "Bloggs",
-      "emailAddress": "joe.bloggs@example.com",
       "dateOfBirth": "1990-01-15"
     },
     "organisation": {
