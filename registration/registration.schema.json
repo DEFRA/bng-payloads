@@ -11,13 +11,7 @@
         "applicant": {
           "type": "object",
           "properties": {
-            "firstName": {
-              "type": "string"
-            },
-            "lastName": {
-              "type": "string"
-            },
-            "emailaddress": {
+            "id": {
               "type": "string"
             },
             "role": {
@@ -25,9 +19,7 @@
             }
           },
           "required": [
-            "firstName",
-            "lastName",
-            "emailaddress",
+            "id",
             "role"
           ]
         },
@@ -431,9 +423,6 @@
             "fee": {
               "type": "number"
             },
-            "reference": {
-              "type": "string"
-            },
             "method": {
               "type": "string",
               "enum": ["BACS"]
@@ -442,7 +431,6 @@
           "required": [
             "caseType",
             "fee",
-            "reference",
             "method"
           ]
         }
