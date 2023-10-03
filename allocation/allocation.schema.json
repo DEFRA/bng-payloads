@@ -5,19 +5,13 @@
   "description": "An individual developer allocation for a Biodiversity Net Gain Application",
   "type": "object",
   "properties": {
-    "developerAllocation": {
+    "developerRegistration": {
       "type": "object",
       "properties": {
         "applicant": {
           "type": "object",
           "properties": {
-            "firstName": {
-              "type": "string"
-            },
-            "lastName": {
-              "type": "string"
-            },
-            "emailAddress": {
+            "id": {
               "type": "string"
             },
             "role": {
@@ -25,33 +19,9 @@
             }
           },
           "required": [
-            "firstName",
-            "lastName",
-            "emailAddress",
+            "id",
             "role"
           ]
-        },
-        "developmentDetails": {
-          "type": "object",
-          "properties": {
-            "projectName": {
-              "type": "string"
-            },
-            "localAuthority": {
-              "type": "string"
-            },
-            "planningReference": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "projectName",
-            "localAuthority",
-            "planningReference"
-          ]
-        },
-        "biodiversityGainSiteNumber": {
-          "type": "string"
         },
         "metricData": {
           "type": "object",
@@ -470,13 +440,6 @@
             "validation"
           ]
         },
-        "referenceNumber": {
-          "type": "string"
-        },
-        "submittedOn": {
-          "type": "string",
-          "format": "date-time"
-        },
         "files": {
           "type": "array",
           "items": {
@@ -507,6 +470,31 @@
             ]
           }
         },
+        "developmentDetails": {
+          "projectName": {
+            "type": "string"
+          },
+          "localAuthority": {
+            "type": "string"
+          },
+          "planningReference": {
+            "type": "string"
+          }
+        },
+        "allocatedGainSites": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "gainSiteReference": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "referenceNumber": {
+          "type": "string"
+        },
         "payment": {
           "type": "object",
           "properties": {
@@ -516,9 +504,6 @@
             "fee": {
               "type": "number"
             },
-            "reference": {
-              "type": "string"
-            },
             "method": {
               "type": "string",
               "enum": ["BACS"]
@@ -527,16 +512,22 @@
           "required": [
             "caseType",
             "fee",
-            "reference",
             "method"
           ]
+        },
+        "submittedOn": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
         "applicant",
-        "developmentDetails",
-        "biodiversityGainSiteNumber",
         "metricData",
+        "files",
+        "projectName",
+        "localAuthority",
+        "planningReference",
+        "allocatedGainSites",
         "referenceNumber",
         "submittedOn",
         "payment"
@@ -544,6 +535,6 @@
     }
   },
   "required": [
-    "developerAllocation"
+    "developerRegistration"
   ]
 }
