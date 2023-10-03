@@ -4,6 +4,40 @@
       "id": "123456",
       "role": "Ecologist"
     },
+    "habitats": {
+      "baseline": [
+        {
+          "habitatType": "Cereal crops",
+          "baselineReference": "BGS-111 222 333",
+          "condition": "Condition Assessment N/A",
+          "area": {
+            "beforeEnhancement": 1.0,
+            "afterEnhancement": 1.0
+          }
+        },
+        {
+          "habitatType": "Modified grassland",
+          "baselineReference": "BGS-111 222 333",
+          "condition": "Moderate",
+          "area": {
+            "beforeEnhancement": 1.0,
+            "afterEnhancement": 2.0
+          }
+        }
+      ],
+      "proposed": [
+        {
+          "id": "2",
+          "baselineReference": "BGS-111 222 333",
+          "module": "Created",
+          "state": "Medium",
+          "condition": "Fairly Good",
+          "strategicSignificance": "Area/compensation not in local strategy/ no local strategy",
+          "advanceCreation": 0,
+          "delayedCreation": 0
+        }
+      ]
+    },
     "files": [
       {
         "contentMediaType": "application/msword",
@@ -64,203 +98,6 @@
     "legalAgreementType": "759150001",
     "legalAgreementStartDate": "2022-01-01T00:00:00.000Z",
     "submittedOn": "2023-09-08T08:42:25.804Z",
-    "metricData": {
-      "d1": [
-        {
-          "Broad habitat": "Cropland",
-          "Habitat type": "Cereal crops",
-          "Area (hectares)": 1,
-          "Total habitat units": 2,
-          "Condition": "Condition Assessment N/A"
-        },
-        {
-          "Broad habitat": "Grassland",
-          "Habitat type": "Modified grassland",
-          "Area (hectares)": 1,
-          "Total habitat units": 4,
-          "Condition": "Moderate"
-        },
-        {
-          "Broad habitat": "Woodland and forest",
-          "Habitat type": "Other woodland; mixed",
-          "Area (hectares)": 0.5,
-          "Total habitat units": 2,
-          "Condition": "Poor"
-        },
-        {
-          "Broad habitat": "Grassland",
-          "Habitat type": "Modified grassland",
-          "Area (hectares)": 1,
-          "Total habitat units": 2,
-          "Condition": "Poor"
-        },
-        {
-          "Habitat type": "Total habitat area",
-          "Area (hectares)": 3.5,
-          "Total habitat units": 10
-        }
-      ],
-      "d2": [
-        {
-          "Delay in starting habitat creation (years)": 0,
-          "Broad habitat": "Grassland",
-          "Proposed habitat": "Other neutral grassland",
-          "Area (hectares)": 0.9,
-          "Condition": "Fairly Good",
-          "Habitat units delivered": 7.0134822603,
-          "Habitat created in advance (years)": 0
-        },
-        {
-          "Delay in starting habitat creation (years)": 0,
-          "Broad habitat": "Heathland and shrub",
-          "Proposed habitat": "Bramble scrub",
-          "Area (hectares)": 0.1,
-          "Condition": "Condition Assessment N/A",
-          "Habitat units delivered": 0.386,
-          "Habitat created in advance (years)": 0
-        },
-        {
-          "Proposed habitat": "Total habitat area",
-          "Area (hectares)": 1,
-          "Habitat units delivered": 7.3994822603
-        }
-      ],
-      "d3": [
-        {
-          "Baseline habitat": "Grassland - Modified grassland",
-          "Proposed Broad Habitat": "Wetland",
-          "Habitat enhanced in advance (years)": 0,
-          "Delay in starting habitat enhancement (years)": 0,
-          "Area (hectares)": 1,
-          "Condition": "Good",
-          "Habitat units delivered": 7.027257226998999,
-          "Proposed habitat": "Lowland raised bog"
-        },
-        {
-          "Baseline habitat": "Woodland and forest - Other woodland; mixed",
-          "Proposed Broad Habitat": "Woodland and forest",
-          "Habitat enhanced in advance (years)": 0,
-          "Delay in starting habitat enhancement (years)": 0,
-          "Area (hectares)": 0.5,
-          "Condition": "Good",
-          "Habitat units delivered": 4.555818212099999,
-          "Proposed habitat": "Other woodland; mixed"
-        },
-        {
-          "Baseline habitat": "Grassland - Modified grassland",
-          "Proposed Broad Habitat": "Grassland",
-          "Habitat enhanced in advance (years)": 0,
-          "Delay in starting habitat enhancement (years)": 0,
-          "Area (hectares)": 1,
-          "Condition": "Good",
-          "Habitat units delivered": 4.9956750053,
-          "Proposed habitat": "Modified grassland"
-        },
-        {
-          "Area (hectares)": 2.5,
-          "Habitat units delivered": 16.578750444399
-        }
-      ],
-      "e1": [
-        {
-          "Hedgerow type": "Native hedgerow - associated with bank or ditch",
-          "Length (km)": 0.3,
-          "Total hedgerow units": 1.2,
-          "Condition": "Poor"
-        },
-        {
-          "Hedgerow type": "Native hedgerow",
-          "Length (km)": 0.3,
-          "Total hedgerow units": 0.6,
-          "Condition": "Poor"
-        },
-        {
-          "Length (km)": 0.6,
-          "Total hedgerow units": 1.7999999999999998
-        }
-      ],
-      "e2": [
-        {
-          "Habitat type": "Native hedgerow with trees",
-          "Length (km)": 0.3,
-          "Delay in starting habitat creation (years)": 0,
-          "Hedge units delivered": 1.7654229486,
-          "Condition": "Good",
-          "Habitat created in advance (years)": 0
-        },
-        {
-          "Length (km)": 0.3,
-          "Hedge units delivered": 1.7654229486
-        }
-      ],
-      "e3": [
-        {
-          "Baseline habitat": "Native hedgerow - associated with bank or ditch",
-          "Length (km)": 0.3,
-          "Habitat enhanced in advance (years)": 0,
-          "Delay in starting habitat enhancement (years)": 0,
-          "Proposed habitat": "Native hedgerow - associated with bank or ditch",
-          "Hedge units delivered": 2.27835855,
-          "Condition": "Moderate"
-        },
-        {
-          "Length (km)": 0.3,
-          "Hedge units delivered": 2.27835855
-        }
-      ],
-      "f1": [
-        {
-          "Watercourse type": "Ditches",
-          "Length (km)": 0.3,
-          "Total watercourse units": 1.2,
-          "Condition": "Poor"
-        },
-        {
-          "Watercourse type": "Ditches",
-          "Length (km)": 0.3,
-          "Total watercourse units": 1.2,
-          "Condition": "Poor"
-        },
-        {
-          "Length (km)": 0.6,
-          "Total watercourse units": 2.4
-        }
-      ],
-      "f2": [
-        {
-          "Watercourse type": "Ditches",
-          "Habitat created in advance (years)": 0,
-          "Delay in starting habitat creation (years)": 0,
-          "Watercourse units delivered": 2.594403979575,
-          "Condition": "Fairly Good",
-          "Length (km)": 0.3
-        },
-        {
-          "Watercourse units delivered": 2.594403979575,
-          "Length (km)": 0.3
-        }
-      ],
-      "f3": [
-        {
-          "Baseline habitat": "Ditches",
-          "Length (km)": 0.3,
-          "Habitat enhanced in advance (years)": 0,
-          "Delay in starting habitat enhancement (years)": 0,
-          "Proposed habitat": "Ditches",
-          "Watercourse units delivered": 2.409217854828,
-          "Condition": "Good"
-        },
-        {
-          "Length (km)": 0.3,
-          "Watercourse units delivered": 2.409217854828
-        }
-      ],
-      "validation": {
-        "isVersion4OrLater": true,
-        "isOffsiteDataPresent": true,
-        "areOffsiteTotalsCorrect": true
-      }
-    },
     "payment": {
       "caseType": "registration",
       "fee": 639,

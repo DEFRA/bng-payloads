@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://biodiversitynetgain.naturalengland.gov.uk/registration.schema.json",
   "title": "Biodiversity Net Gain Landowner Registration",
   "description": "An individual landowner registration for a Biodiversity Net Gain Application",
@@ -21,6 +21,110 @@
           "required": [
             "id",
             "role"
+          ]
+        },
+        "habitats":{
+          "type": "object",
+          "properties": {
+            "baseline": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "habitatType": {
+                    "type": "string"
+                  },
+                  "baselineReference": {
+                    "type": "string"
+                  },
+                  "condition": {
+                    "type": "string"
+                  },
+                  "area": {
+                    "type": "object",
+                    "properties": {
+                      "beforeEnhancement": {
+                        "type": "number"
+                      },
+                      "afterEnhancement": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "beforeEnhancement",
+                      "afterEnhancement"
+                    ]
+                  }
+                },
+                "required": [
+                  "habitatType",
+                  "baselineReference",
+                  "condition",
+                  "area"
+                ]
+              }
+            },
+            "proposed": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "baselineReference": {
+                    "type": "string"
+                  },
+                  "module": {
+                    "type": "string",
+                    "enum": ["Baseline", "Created", "Enhanced"]
+                  },
+                  "state": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "condition": {
+                    "type": "string"
+                  },
+                  "strategicSignificance": {
+                    "type": "string"
+                  },
+                  "advanceCreation": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 30
+                  },
+                  "delayedCreation": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 30
+                  },
+                  "encroachmentExtent": {
+                    "type": "string"
+                  },
+                  "encroachmentExtentBothBanks": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "baselineReference",
+                  "module",
+                  "state",
+                  "type",
+                  "condition",
+                  "strategicSignificance",
+                  "advanceCreation",
+                  "delayedCreation"
+                ]
+              }
+            }
+          },
+          "required": [
+            "baseline",
+            "proposed"
           ]
         },
         "files": {
@@ -88,332 +192,6 @@
           "type": "string",
           "format": "date-time"
         },
-        "metricData": {
-          "type": "object",
-          "properties": {
-            "startPage": {
-              "type": "object",
-              "properties": {
-                "planningAuthority": {
-                  "type": "string"
-                },
-                "projectName": {
-                  "type": "string"
-                },
-                "planningApplicationReference": {
-                  "type": "string"
-                },
-                "targetNetGain": {
-                  "type": "number"
-                },
-                "irreplaceableHabitatPresentOnSiteAtBaseline": {
-                  "type": "string"
-                },
-                "totalSiteAreaIncludingIrreplaceableHabitatArea": {
-                  "type": "number"
-                },
-                "containsDeviationsFromTheStatutoryMetricThisMustBeAgreedWithConsentingBody": {
-                  "type": "string"
-                },
-                "onSiteBaselineMapReferenceNumber": {
-                  "type": "string"
-                },
-                "offSiteBaselineMapReferenceNumber": {
-                  "type": "string"
-                },
-                "cells": {
-                  "type": "object",
-                  "properties": {
-                    "version": {
-                      "type": "number"
-                    }
-                  }
-                }
-              }
-            },
-            "d1": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Broad habitat": {
-                    "type": "string"
-                  },
-                  "Habitat type": {
-                    "type": "string"
-                  },
-                  "Area (hectares)": {
-                    "type": "number"
-                  },
-                  "Strategic significance": {
-                    "type": "string"
-                  },
-                  "Total habitat units": {
-                    "type": "number"
-                  },
-                  "Off-site reference": {
-                    "type": "string"
-                  },
-                  "Condition": {
-                    "type": "string"
-                  }
-                }
-              }
-            },
-            "d2": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Delay in starting habitat creation (years)": {
-                    "type": "number"
-                  },
-                  "Off-site reference": {
-                    "type": "number"
-                  },
-                  "Broad habitat": {
-                    "type": "string"
-                  },
-                  "Proposed habitat": {
-                    "type": "string"
-                  },
-                  "Area (hectares)": {
-                    "type": "number"
-                  },
-                  "Condition": {
-                    "type": "string"
-                  },
-                  "Habitat units delivered": {
-                    "type": "number"
-                  },
-                  "Habitat created in advance (years)": {
-                    "type": "number"
-                  }
-                }
-              }
-            },
-            "d3": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Baseline habitat": {
-                    "type": "string"
-                  },
-                  "Total habitat area": {
-                    "type": "number"
-                  },
-                  "Proposed Broad Habitat": {
-                    "type": "string"
-                  },
-                  "Condition change": {
-                    "type": "string"
-                  },
-                  "Habitat enhanced in advance (years)": {
-                    "type": "number"
-                  },
-                  "Delay in starting habitat enhancement (years)": {
-                    "type": "number"
-                  },
-                  "Off-site reference": {
-                    "type": "string"
-                  },
-                  "Area (hectares)": {
-                    "type": "number"
-                  },
-                  "Condition": {
-                    "type": "string"
-                  },
-                  "Habitat units delivered": {
-                    "type": "number"
-                  },
-                  "Proposed habitat": {
-                    "type": "string"
-                  },
-                  "Distinctiveness change": {
-                    "type": "string"
-                  }
-                }
-              }
-            },
-            "e1": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Hedgerow type": {
-                    "type": "string"
-                  },
-                  "Length (km)": {
-                    "type": "number"
-                  },
-                  "Total hedgerow units": {
-                    "type": "number"
-                  },
-                  "Condition": {
-                    "type": "string"
-                  }
-                }
-              }
-            },
-            "e2": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Habitat type": {
-                    "type": "string"
-                  },
-                  "Length (km)": {
-                    "type": "number"
-                  },
-                  "Delay in starting habitat creation (years)": {
-                    "type": "number"
-                  },
-                  "Hedge units delivered": {
-                    "type": "number"
-                  },
-                  "Condition": {
-                    "type": "string"
-                  },
-                  "Habitat created in advance (years)": {
-                    "type": "number"
-                  }
-                }
-              }
-            },
-            "e3": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Baseline habitat": {
-                    "type": "string"
-                  },
-                  "Length (km)": {
-                    "type": "number"
-                  },
-                  "Habitat enhanced in advance (years)": {
-                    "type": "number"
-                  },
-                  "Delay in starting habitat enhancement (years)": {
-                    "type": "number"
-                  },
-                  "Proposed habitat": {
-                    "type": "string"
-                  },
-                  "Hedge units delivered": {
-                    "type": "number"
-                  },
-                  "Condition": {
-                    "type": "string"
-                  }
-                }
-              }              
-            },
-            "f1": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Watercourse type": {
-                    "type": "string"
-                  },
-                  "Length (km)": {
-                    "type": "number"
-                  },
-                  "Total watercourse units": {
-                    "type": "number"
-                  },
-                  "Condition": {
-                    "type": "string"
-                  }
-                }
-              }
-            },
-            "f2": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Watercourse type": {
-                    "type": "string"
-                  },
-                  "Habitat created in advance (years)": {
-                    "type": "number"
-                  },
-                  "Delay in starting habitat creation (years)": {
-                    "type": "number"
-                  },
-                  "Watercourse units delivered": {
-                    "type": "number"
-                  },
-                  "Condition": {
-                    "type": "string"
-                  },
-                  "Length (km)": {
-                    "type": "number"
-                  }
-                }
-              }
-            }
-            ,
-            "f3": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "Baseline habitat": {
-                    "type": "string"
-                  },
-                  "Length (km)": {
-                    "type": "number"
-                  },
-                  "Habitat enhanced in advance (years)": {
-                    "type": "number"
-                  },
-                  "Delay in starting habitat enhancement (years)": {
-                    "type": "number"
-                  },
-                  "Proposed habitat": {
-                    "type": "string"
-                  },
-                  "Watercourse units delivered": {
-                    "type": "number"
-                  },
-                  "Condition": {
-                    "type": "string"
-                  }
-                }
-              }
-            },
-            "validation": {
-              "type": "object",
-              "properties": {
-                "isMetricWorkbook": {
-                  "type": "boolean"
-                },
-                "isVersion4OrLater": {
-                  "type": "boolean"
-                },
-                "isOffsiteDataPresent": {
-                  "type": "boolean"
-                },
-                "areOffsiteTotalsCorrect": {
-                  "type": "boolean"
-                }
-              },
-              "required": [
-                "isVersion4OrLater",
-                "isOffsiteDataPresent",
-                "areOffsiteTotalsCorrect"
-              ]
-            }            
-          },
-          "required": [
-            "validation"
-          ]
-        },
         "payment": {
           "type": "object",
           "properties": {
@@ -437,6 +215,7 @@
       },
       "required": [
         "applicant",
+        "habitats",
         "files",
         "gainSiteReference",
         "landBoundaryGridReference",
@@ -445,7 +224,6 @@
         "legalAgreementType",
         "legalAgreementStartDate",
         "submittedOn",
-        "metricData",
         "payment"
       ]
     }
