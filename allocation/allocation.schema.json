@@ -26,16 +26,24 @@
         "habitats": {
           "type": "object",
           "properties": {
-            "proposed": {
+            "allocated": {
               "type": "array",
               "items": {
                 "type": "object",
                 "properties": {
-                  "id": {
+                  "allocatedHabitatId": {
                     "type": "string"
                   },
                   "area": {
                     "type": "number"
+                  },
+                  "module": {
+                    "type": "string",
+                    "enum": ["Baseline", "Created", "Enhanced"]
+                  },
+                  "state": {
+                    "type": "string",
+                    "enum": ["Habitat", "Hedge", "Watercourse"]
                   },
                   "deliveredUnits": {
                     "type": "number"
@@ -116,11 +124,8 @@
         "payment": {
           "type": "object",
           "properties": {
-            "caseType": {
+            "reference": {
               "type": "string"
-            },
-            "fee": {
-              "type": "number"
             },
             "method": {
               "type": "string",
@@ -128,8 +133,7 @@
             }
           },
           "required": [
-            "caseType",
-            "fee",
+            "reference",
             "method"
           ]
         },
