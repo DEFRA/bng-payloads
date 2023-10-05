@@ -54,6 +54,10 @@
                       "beforeEnhancement",
                       "afterEnhancement"
                     ]
+                  },
+                  "measurementUnits": {
+                    "type": "string",
+                    "enum": ["hectares", "kilometres"]
                   }
                 },
                 "required": [
@@ -69,7 +73,7 @@
               "items": {
                 "type": "object",
                 "properties": {
-                  "id": {
+                  "proposedHabitatId": {
                     "type": "string"
                   },
                   "baselineReference": {
@@ -80,9 +84,10 @@
                     "enum": ["Baseline", "Created", "Enhanced"]
                   },
                   "state": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": ["Habitat", "Hedge", "Watercourse"]
                   },
-                  "type": {
+                  "habitatType": {
                     "type": "string"
                   },
                   "condition": {
@@ -106,18 +111,27 @@
                   },
                   "encroachmentExtentBothBanks": {
                     "type": "string"
+                  },
+                  "area": {
+                    "type": "number"
+                  },
+                  "measurementUnits": {
+                    "type": "string",
+                    "enum": ["hectares", "kilometres"]
                   }
                 },
                 "required": [
-                  "id",
+                  "proposedHabitatId",
                   "baselineReference",
                   "module",
                   "state",
-                  "type",
+                  "habitatType",
                   "condition",
                   "strategicSignificance",
                   "advanceCreation",
-                  "delayedCreation"
+                  "delayedCreation",
+                  "area",
+                  "measurementUnits"
                 ]
               }
             }
@@ -195,11 +209,8 @@
         "payment": {
           "type": "object",
           "properties": {
-            "caseType": {
+            "reference": {
               "type": "string"
-            },
-            "fee": {
-              "type": "number"
             },
             "method": {
               "type": "string",
@@ -207,8 +218,7 @@
             }
           },
           "required": [
-            "caseType",
-            "fee",
+            "reference",
             "method"
           ]
         }

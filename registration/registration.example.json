@@ -13,7 +13,8 @@
           "area": {
             "beforeEnhancement": 1.0,
             "afterEnhancement": 1.0
-          }
+          },
+          "measurementUnits": "hectares"
         },
         {
           "habitatType": "Modified grassland",
@@ -27,14 +28,17 @@
       ],
       "proposed": [
         {
-          "id": "2",
+          "proposedHabitatId": "2",
+          "habitatType": "Cereal crops",
           "baselineReference": "BGS-111 222 333",
           "module": "Created",
-          "state": "Medium",
+          "state": "Habitat",
           "condition": "Fairly Good",
           "strategicSignificance": "Area/compensation not in local strategy/ no local strategy",
           "advanceCreation": 0,
-          "delayedCreation": 0
+          "delayedCreation": 0,
+          "area": 1,
+          "measurementUnits": "hectares"
         }
       ]
     },
@@ -99,8 +103,7 @@
     "legalAgreementStartDate": "2022-01-01T00:00:00.000Z",
     "submittedOn": "2023-09-08T08:42:25.804Z",
     "payment": {
-      "caseType": "registration",
-      "fee": 639,
+      "reference": "",
       "method": "BACS"
     }
   }
