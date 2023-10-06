@@ -12,9 +12,16 @@
           "type": "object",
           "properties": {
             "id": {
+              "description": "DefraID account identifier.",
               "type": "string"
             },
             "role": {
+              "description": "Role of the person completing the application.",
+              "examples": [
+                "Landowner",
+                "Ecologist",
+                "Developer"
+              ],
               "type": "string"
             }
           },
@@ -23,7 +30,29 @@
             "role"
           ]
         },
-        "habitats":{
+        "organisation": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "description": "DefraID account identifier.",
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "dateOfIncorporation": {
+              "type": "string",
+              "format": "date"
+            },
+            "registeredAddress": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ]
+        },
+        "habitats": {
           "type": "object",
           "properties": {
             "baseline": {
@@ -113,6 +142,7 @@
                     "type": "string"
                   },
                   "area": {
+                    "description": "Area covered by the habitat.",
                     "type": "number"
                   },
                   "measurementUnits": {

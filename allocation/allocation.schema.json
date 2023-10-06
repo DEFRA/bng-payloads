@@ -12,15 +12,44 @@
           "type": "object",
           "properties": {
             "id": {
+              "description": "DefraID account identifier.",
               "type": "string"
             },
             "role": {
+              "description": "Role of the person completing the application.",
+              "examples": [
+                "Landowner",
+                "Ecologist",
+                "Developer"
+              ],
               "type": "string"
             }
           },
           "required": [
             "id",
             "role"
+          ]
+        },
+        "organisation": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "description": "DefraID account identifier.",
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "dateOfIncorporation": {
+              "type": "string",
+              "format": "date"
+            },
+            "registeredAddress": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
           ]
         },
         "habitats": {
@@ -35,6 +64,7 @@
                     "type": "string"
                   },
                   "area": {
+                    "description": "Area covered by the habitat.",
                     "type": "number"
                   },
                   "module": {
@@ -46,6 +76,7 @@
                     "enum": ["Habitat", "Hedge", "Watercourse"]
                   },
                   "deliveredUnits": {
+                    "description": "Number of biodiversity units delivered by this habitat",
                     "type": "number"
                   },
                   "measurementUnits": {
@@ -98,9 +129,17 @@
         },
         "developmentDetails": {
           "projectName": {
+            "description": "A name for the development project as assigned by the developer",
+            "maxLength": 255,
             "type": "string"
           },
           "localAuthority": {
+            "description": "The name of the local planning authority",
+            "maxLength": 255,
+            "examples": [
+              "North West Leicestershire LPA",
+              "Lincoln LPA"
+            ],
             "type": "string"
           },
           "planningReference": {

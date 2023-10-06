@@ -12,6 +12,7 @@
           "type": "object",
           "properties": {
             "id": {
+              "description": "DefraID account identifier.",
               "type": "string"
             },
             "nationality": {
@@ -42,6 +43,7 @@
           "type": "object",
           "properties": {
             "id": {
+              "description": "DefraID account identifier.",
               "type": "string"
             },
             "type": {
