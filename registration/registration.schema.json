@@ -93,7 +93,8 @@
                   "habitatType",
                   "baselineReference",
                   "condition",
-                  "area"
+                  "area",
+                  "measurementUnits"
                 ]
               }
             },

@@ -23,7 +23,8 @@
           "area": {
             "beforeEnhancement": 1.0,
             "afterEnhancement": 2.0
-          }
+          },
+          "measurementUnits": "hectares"
         }
       ],
       "proposed": [
