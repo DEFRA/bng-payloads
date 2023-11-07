@@ -26,16 +26,167 @@
             "role"
           ]
         },
+        "landownerAddress": {
+          "description": "Address of landowner/leaseholder, can be UK or International",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["uk", "international"]
+            },
+            "line1": {
+              "type": "string"
+            },
+            "line2": {
+              "type": "string"
+            },
+            "line3": {
+              "type": "string"
+            },
+            "town": {
+              "type": "string"
+            },
+            "postcode": {
+              "type": "string"
+            },
+            "county": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "line1",
+            "town"
+          ]
+        },
         "organisation": {
           "type": "object",
           "properties": {
             "id": {
               "description": "DefraID organisation account identifier.",
               "type": "string"
+            },
+            "address": {
+              "description": "Address of organisation, can be UK or International",
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["uk", "international"]
+                },
+                "line1": {
+                  "type": "string"
+                },
+                "line2": {
+                  "type": "string"
+                },
+                "line3": {
+                  "type": "string"
+                },
+                "town": {
+                  "type": "string"
+                },
+                "postcode": {
+                  "type": "string"
+                },
+                "county": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "line1",
+                "town"
+              ]
             }
           },
           "required": [
-            "id"
+            "id",
+            "address"
+          ]
+        },
+        "agent": {
+          "type": "object",
+          "properties": {
+            "clientType": {
+              "description": "Who the agent is representing, an individual or organisation",
+              "type": "string",
+              "enum": ["individual", "organisation"]
+            },
+            "clientNameIndividual": {
+              "description": "Name of client if individual",
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "firstName",
+                "lastName"
+              ]
+            },
+            "clientNameOrganisation": {
+              "description": "Name of client if organisation",
+              "type": "string"
+            },
+            "clientPhoneNumber": {
+              "description": "Phone number of client if individual",
+              "type": "string"
+            },
+            "clientEmail": {
+              "description": "Email of client if individual",
+              "type": "string"
+            },
+            "clientAddress": {
+              "description": "Address of client, can be UK or International",
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["uk", "international"]
+                },
+                "line1": {
+                  "type": "string"
+                },
+                "line2": {
+                  "type": "string"
+                },
+                "line3": {
+                  "type": "string"
+                },
+                "town": {
+                  "type": "string"
+                },
+                "postcode": {
+                  "type": "string"
+                },
+                "county": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "line1",
+                "town"
+              ]
+            }
+          },
+          "required": [
+            "clientType",
+            "clientAddress"
           ]
         },
         "habitats": {

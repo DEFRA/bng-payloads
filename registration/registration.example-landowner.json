@@ -2,7 +2,13 @@
   "landownerGainSiteRegistration": {
     "applicant": {
       "id": "123456",
-      "role": "agent"
+      "role": "landowner"
+    },
+    "landownerAddress": {
+      "type": "uk",
+      "line1": "123 The Street",
+      "town": "York",
+      "postcode": "YO10 4BN"
     },
     "habitats": {
       "baseline": [
@@ -87,7 +93,7 @@
         "fileName": "local-land-charge.doc"
       }
     ],
-    "gainSiteReference": "",
+    "gainSiteReference": "BNGREG-HRK8H-A9LVP",
     "landBoundaryGridReference": "SE170441",
     "landBoundaryHectares": 2,
     "landowners": {
@@ -118,7 +124,7 @@
     "habitatPlanIncludedLegalAgreementYesNo": "No",
     "submittedOn": "2023-09-08T08:42:25.804Z",
     "payment": {
-      "reference": "",
+      "reference": "BNGREG-HRK8H-A9LVP",
       "method": "BACS"
     }
   }

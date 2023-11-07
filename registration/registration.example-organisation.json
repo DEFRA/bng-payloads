@@ -1,0 +1,125 @@
+{
+  "landownerGainSiteRegistration": {
+    "applicant": {
+      "id": "123456",
+      "role": "organisation"
+    },
+    "organisation": {
+      "id": "987654321",
+      "address": {
+        "type": "international",
+        "line1": "123 Le Street",
+        "town": "Paris",
+        "country": "France"
+      }
+    },
+    "habitats": {
+      "baseline": [
+        {
+          "habitatType": "Cereal crops",
+          "baselineReference": "BGS-111 222 333",
+          "condition": "Condition Assessment N/A",
+          "area": {
+            "beforeEnhancement": 1.0,
+            "afterEnhancement": 1.0
+          },
+          "measurementUnits": "hectares"
+        },
+        {
+          "habitatType": "Modified grassland",
+          "baselineReference": "BGS-111 222 333",
+          "condition": "Moderate",
+          "area": {
+            "beforeEnhancement": 1.0,
+            "afterEnhancement": 2.0
+          },
+          "measurementUnits": "hectares"
+        }
+      ],
+      "proposed": [
+        {
+          "proposedHabitatId": "2",
+          "habitatType": "Cereal crops",
+          "baselineReference": "BGS-111 222 333",
+          "module": "Created",
+          "state": "Habitat",
+          "condition": "Fairly Good",
+          "strategicSignificance": "Area/compensation not in local strategy/ no local strategy",
+          "advanceCreation": 0,
+          "delayedCreation": 0,
+          "area": 1,
+          "measurementUnits": "hectares"
+        }
+      ]
+    },
+    "files": [
+      {
+        "contentMediaType": "application/msword",
+        "fileType": "legal-agreement",
+        "fileSize": 0.01,
+        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/legal-agreement/legal-agreement.doc",
+        "fileName": "legal-agreement.doc"
+      },
+      {
+        "contentMediaType": "application/msword",
+        "fileType": "land-boundary",
+        "fileSize": 0.01,
+        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/land-boundary/legal-agreement.doc",
+        "fileName": "legal-agreement.doc"
+      },
+      {
+        "contentMediaType": "application/vnd.ms-excel.sheet.macroEnabled.12",
+        "fileType": "metric",
+        "fileSize": 5.39,
+        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/metric-upload/new-metric-4.0.xlsm",
+        "fileName": "new-metric-4.0.xlsm"
+      },
+      {
+        "contentMediaType": "application/msword",
+        "fileType": "land-ownership",
+        "fileSize": 0.01,
+        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/land-ownership/legal-agreement.doc",
+        "fileName": "legal-agreement.doc"
+      },
+      {
+        "contentMediaType": "application/msword",
+        "fileType": "local-land-charge",
+        "fileSize": 0.01,
+        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/local-land-charge/local-land-charge.doc",
+        "fileName": "local-land-charge.doc"
+      }
+    ],
+    "gainSiteReference": "BNGREG-HRK8H-A9LVP",
+    "landBoundaryGridReference": "SE170441",
+    "landBoundaryHectares": 2,
+    "landowners": {
+      "organisation": [
+        {
+          "organisationName": "org1"
+        }
+      ],
+      "individual": [
+        {
+          "firstName": "John",
+          "middleNames": "Geoff",
+          "lastName": "Smith"
+        }
+      ]
+    },
+    "legalAgreementType": "759150000",
+    "planningObligationLPAs": [
+      {
+        "LPAName": "County Durham LPA",
+        "LPAId": "E60000001"
+      }
+    ],
+    "enhancementWorkStartDate": "2022-01-01T00:00:00.000Z",
+    "legalAgreementEndDate": "2023-01-01T00:00:00.000Z",
+    "habitatPlanIncludedLegalAgreementYesNo": "Yes",
+    "submittedOn": "2023-09-08T08:42:25.804Z",
+    "payment": {
+      "reference": "BNGREG-HRK8H-A9LVP",
+      "method": "BACS"
+    }
+  }
+}
