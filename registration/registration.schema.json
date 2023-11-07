@@ -17,12 +17,8 @@
             },
             "role": {
               "description": "Role of the person completing the application.",
-              "examples": [
-                "Landowner",
-                "Ecologist",
-                "Developer"
-              ],
-              "type": "string"
+              "type": "string",
+              "enum": ["agent", "landowner", "representative"]
             }
           },
           "required": [
@@ -30,26 +26,167 @@
             "role"
           ]
         },
-        "organisation": {
+        "landownerAddress": {
+          "description": "Address of landowner/leaseholder, can be UK or International",
           "type": "object",
           "properties": {
-            "id": {
-              "description": "DefraID account identifier.",
-              "type": "string"
-            },
             "type": {
+              "type": "string",
+              "enum": ["uk", "international"]
+            },
+            "line1": {
               "type": "string"
             },
-            "dateOfIncorporation": {
-              "type": "string",
-              "format": "date"
+            "line2": {
+              "type": "string"
             },
-            "registeredAddress": {
+            "line3": {
+              "type": "string"
+            },
+            "town": {
+              "type": "string"
+            },
+            "postcode": {
+              "type": "string"
+            },
+            "county": {
+              "type": "string"
+            },
+            "country": {
               "type": "string"
             }
           },
           "required": [
-            "id"
+            "type",
+            "line1",
+            "town"
+          ]
+        },
+        "organisation": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "description": "DefraID organisation account identifier.",
+              "type": "string"
+            },
+            "address": {
+              "description": "Address of organisation, can be UK or International",
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["uk", "international"]
+                },
+                "line1": {
+                  "type": "string"
+                },
+                "line2": {
+                  "type": "string"
+                },
+                "line3": {
+                  "type": "string"
+                },
+                "town": {
+                  "type": "string"
+                },
+                "postcode": {
+                  "type": "string"
+                },
+                "county": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "line1",
+                "town"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "address"
+          ]
+        },
+        "agent": {
+          "type": "object",
+          "properties": {
+            "clientType": {
+              "description": "Who the agent is representing, an individual or organisation",
+              "type": "string",
+              "enum": ["individual", "organisation"]
+            },
+            "clientNameIndividual": {
+              "description": "Name of client if individual",
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "firstName",
+                "lastName"
+              ]
+            },
+            "clientNameOrganisation": {
+              "description": "Name of client if organisation",
+              "type": "string"
+            },
+            "clientPhoneNumber": {
+              "description": "Phone number of client if individual",
+              "type": "string"
+            },
+            "clientEmail": {
+              "description": "Email of client if individual",
+              "type": "string"
+            },
+            "clientAddress": {
+              "description": "Address of client, can be UK or International",
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["uk", "international"]
+                },
+                "line1": {
+                  "type": "string"
+                },
+                "line2": {
+                  "type": "string"
+                },
+                "line3": {
+                  "type": "string"
+                },
+                "town": {
+                  "type": "string"
+                },
+                "postcode": {
+                  "type": "string"
+                },
+                "county": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "line1",
+                "town"
+              ]
+            }
+          },
+          "required": [
+            "clientType",
+            "clientAddress"
           ]
         },
         "habitats": {
@@ -211,16 +348,42 @@
         "landBoundaryHectares": {
           "type": "number"
         },
-        "legalAgreementParties": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "role": {
-                "type": "string"
+        "landowners": {
+          "type": "object",
+          "properties": {
+            "organisation": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "organisationName": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "organisationName"
+                ]
+              }
+            },
+            "individual": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "type": "string"
+                  },
+                  "middleNames": {
+                    "type": "string"
+                  },
+                  "lastName": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "firstName",
+                  "lastName"
+                ]
               }
             }
           }
@@ -229,9 +392,49 @@
           "type": "string",
           "enum": ["759150000", "759150001", "759150002", "-1"]
         },
-        "legalAgreementStartDate": {
+        "conservationCovernantResponsibleBodies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "responsibleBodyName": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "responsibleBodyName"
+            ]
+          }
+        },
+        "planningObligationLPAs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "LPAName": {
+                "type": "string"
+              },
+              "LPAId": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "LPAName",
+              "LPAId"
+            ]
+          }
+        },
+        "enhancementWorkStartDate": {
           "type": "string",
           "format": "date-time"
+        },
+        "legalAgreementEndDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "habitatPlanIncludedLegalAgreementYesNo": {
+          "type": "string",
+          "enum": ["Yes", "No"]
         },
         "submittedOn": {
           "type": "string",
@@ -261,9 +464,9 @@
         "gainSiteReference",
         "landBoundaryGridReference",
         "landBoundaryHectares",
-        "legalAgreementParties",
+        "landowners",
         "legalAgreementType",
-        "legalAgreementStartDate",
+        "habitatPlanIncludedLegalAgreementYesNo",
         "submittedOn",
         "payment"
       ]
