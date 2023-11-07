@@ -7,8 +7,10 @@ Repository to store Biodiversity Net Gains (BNG) payload schemas and examples.
 ### Registration (Land Owner Journey)
 | File                          	| Current Version 	| Description                                    	|
 |-------------------------------	|-----------------	|------------------------------------------------	|
-| registration.schema.json        	| V0.7            	| JSON schema for a landowner registration payload 	|
-| registration.example.json 	| V0.7            	| Example registration payload   	|
+| registration.schema.json        	| V0.8            	| JSON schema for a landowner registration payload 	|
+| registration.example-agent.json 	| V0.8            	| Example registration payload for agent application  	|
+| registration.example-landowner.json 	| V0.8            	| Example registration payload for landowner application  	|
+| registration.example-organisation.json 	| V0.8            	| Example registration payload for organisation application  	|
 
 ### Allocation (Developer Journey)
 | File                          	| Current Version 	| Description                                    	|
