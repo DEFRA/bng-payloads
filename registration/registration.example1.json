@@ -2,7 +2,7 @@
   "landownerGainSiteRegistration": {
     "applicant": {
       "id": "123456",
-      "role": "Ecologist"
+      "role": "agent"
     },
     "habitats": {
       "baseline": [
@@ -90,18 +90,32 @@
     "gainSiteReference": "",
     "landBoundaryGridReference": "SE170441",
     "landBoundaryHectares": 2,
-    "legalAgreementParties": [
+    "landowners": {
+      "organisation": [
+        {
+          "organisationName": "org1"
+        }
+      ],
+      "individual": [
+        {
+          "firstName": "John",
+          "middleNames": "Geoff",
+          "lastName": "Smith"
+        }
+      ]
+    },
+    "legalAgreementType": "759150001",
+    "conservationCovernantResponsibleBodies": [
       {
-        "name": "org1",
-        "role": "Developer"
+        "responsibleBodyName": "body1"
       },
       {
-        "name": "org2",
-        "role": "Landowner"
+        "responsibleBodyName": "body2"
       }
     ],
-    "legalAgreementType": "759150001",
-    "legalAgreementStartDate": "2022-01-01T00:00:00.000Z",
+    "enhancementWorkStartDate": "2022-01-01T00:00:00.000Z",
+    "legalAgreementEndDate": "2023-01-01T00:00:00.000Z",
+    "habitatPlanIncludedLegalAgreementYesNo": "No",
     "submittedOn": "2023-09-08T08:42:25.804Z",
     "payment": {
       "reference": "",

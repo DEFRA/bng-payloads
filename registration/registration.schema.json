@@ -17,12 +17,8 @@
             },
             "role": {
               "description": "Role of the person completing the application.",
-              "examples": [
-                "Landowner",
-                "Ecologist",
-                "Developer"
-              ],
-              "type": "string"
+              "type": "string",
+              "enum": ["agent", "landowner", "representative"]
             }
           },
           "required": [
@@ -34,17 +30,7 @@
           "type": "object",
           "properties": {
             "id": {
-              "description": "DefraID account identifier.",
-              "type": "string"
-            },
-            "type": {
-              "type": "string"
-            },
-            "dateOfIncorporation": {
-              "type": "string",
-              "format": "date"
-            },
-            "registeredAddress": {
+              "description": "DefraID organisation account identifier.",
               "type": "string"
             }
           },
@@ -211,16 +197,42 @@
         "landBoundaryHectares": {
           "type": "number"
         },
-        "legalAgreementParties": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "role": {
-                "type": "string"
+        "landowners": {
+          "type": "object",
+          "properties": {
+            "organisation": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "organisationName": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "organisationName"
+                ]
+              }
+            },
+            "individual": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "type": "string"
+                  },
+                  "middleNames": {
+                    "type": "string"
+                  },
+                  "lastName": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "firstName",
+                  "lastName"
+                ]
               }
             }
           }
@@ -229,9 +241,49 @@
           "type": "string",
           "enum": ["759150000", "759150001", "759150002", "-1"]
         },
-        "legalAgreementStartDate": {
+        "conservationCovernantResponsibleBodies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "responsibleBodyName": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "responsibleBodyName"
+            ]
+          }
+        },
+        "planningObligationLPAs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "LPAName": {
+                "type": "string"
+              },
+              "LPAId": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "LPAName",
+              "LPAId"
+            ]
+          }
+        },
+        "enhancementWorkStartDate": {
           "type": "string",
           "format": "date-time"
+        },
+        "legalAgreementEndDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "habitatPlanIncludedLegalAgreementYesNo": {
+          "type": "string",
+          "enum": ["Yes", "No"]
         },
         "submittedOn": {
           "type": "string",
@@ -261,9 +313,9 @@
         "gainSiteReference",
         "landBoundaryGridReference",
         "landBoundaryHectares",
-        "legalAgreementParties",
+        "landowners",
         "legalAgreementType",
-        "legalAgreementStartDate",
+        "habitatPlanIncludedLegalAgreementYesNo",
         "submittedOn",
         "payment"
       ]
