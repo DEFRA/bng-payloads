@@ -203,6 +203,14 @@
                   "baselineReference": {
                     "type": "string"
                   },
+                  "module": {
+                    "type": "string",
+                    "enum": ["Baseline", "Created", "Enhanced"]
+                  },
+                  "state": {
+                    "type": "string",
+                    "enum": ["Habitat", "Hedge", "Watercourse"]
+                  },
                   "condition": {
                     "type": "string"
                   },
