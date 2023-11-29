@@ -14,7 +14,9 @@
       "baseline": [
         {
           "habitatType": "Cereal crops",
-          "baselineReference": "BGS-111 222 333",
+          "baselineReference": "1",
+          "module": "Baseline",
+          "state": "Habitat",
           "condition": "Condition Assessment N/A",
           "area": {
             "beforeEnhancement": 1.0,
@@ -24,7 +26,9 @@
         },
         {
           "habitatType": "Modified grassland",
-          "baselineReference": "BGS-111 222 333",
+          "baselineReference": "2",
+          "module": "Baseline",
+          "state": "Habitat",
           "condition": "Moderate",
           "area": {
             "beforeEnhancement": 1.0,
@@ -37,7 +41,7 @@
         {
           "proposedHabitatId": "2",
           "habitatType": "Cereal crops",
-          "baselineReference": "BGS-111 222 333",
+          "baselineReference": "1",
           "module": "Created",
           "state": "Habitat",
           "condition": "Fairly Good",
