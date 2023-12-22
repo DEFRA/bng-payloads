@@ -386,11 +386,15 @@
                   },
                   "lastName": {
                     "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
                   }
                 },
                 "required": [
                   "firstName",
-                  "lastName"
+                  "lastName",
+                  "email"
                 ]
               }
             }
