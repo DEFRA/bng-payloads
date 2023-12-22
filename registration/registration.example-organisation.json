@@ -106,7 +106,8 @@
         {
           "firstName": "John",
           "middleNames": "Geoff",
-          "lastName": "Smith"
+          "lastName": "Smith",
+          "email": "me@me.com"
         }
       ]
     },
