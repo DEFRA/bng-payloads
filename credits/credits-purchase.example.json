@@ -2,11 +2,13 @@
   "creditsPurchase": {
     "applicant": {
       "id": "123456",
-      "nationality": "British",
+      "nationality": [
+        "British",
+        "French"
+      ],
       "dateOfBirth": "1990-01-15"
     },
     "organisation": {
-      "type": "Company",
       "id": "789012"
     },
     "development": {
@@ -28,7 +30,7 @@
         "qty": 5
       }
     ],
-    "files": [          
+    "files": [
       {
         "contentMediaType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         "fileType": "metric",
