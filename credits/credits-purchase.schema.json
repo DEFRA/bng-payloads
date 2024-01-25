@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://biodiversitynetgain.naturalengland.gov.uk/credit.order.schema.json",
   "title": "Biodiversity Net Gain Credit Order",
   "description": "An individual order for one or more Biodiversity Net Gain credits. Multiple types of credits are supported in a single order. Information required to support the processing of the order, including anti-money laundering informtion is included.",
@@ -13,6 +13,10 @@
           "properties": {
             "id": {
               "description": "DefraID account identifier.",
+              "type": "string"
+            },
+            "middleName": {
+              "description": "Middle name/s if applicant has one.",
               "type": "string"
             },
             "nationality": {
