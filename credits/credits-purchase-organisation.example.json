@@ -1,13 +1,7 @@
 {
   "creditsPurchase": {
     "applicant": {
-      "id": "123456",
-      "nationality": [
-        "British",
-        "French"
-      ],
-      "middleName": "Geoff",
-      "dateOfBirth": "1990-01-15"
+      "id": "123456"
     },
     "organisation": {
       "id": "789012"
