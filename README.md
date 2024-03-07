@@ -15,12 +15,15 @@ Repository to store Biodiversity Net Gains (BNG) payload schemas and examples.
 ### Allocation (Developer Journey)
 | File                          	| Current Version 	| Description                                    	|
 |-------------------------------	|-----------------	|------------------------------------------------	|
-| allocation.schema.json        	| V0.6            	| JSON schema for a developer allocation payload 	|
-| allocation.example.json 	| V0.6            	| Example allocation payload       	|
+| allocation.schema.json        	| V0.7            	| JSON schema for a developer allocation payload 	|
+| allocation.example-agent.json 	| V0.7            	| Example allocation payload for agent application  	|
+| allocation.example-landowner.json 	| V0.7            	| Example allocation payload for individual application  	|
+| allocationn.example-organisation.json 	| V0.7            	| Example allocation payload for organisation application  	|
 
 ### Credits
 
 | File                      	| Current Version 	| Description                                     	|
 |---------------------------	|-----------------	|-------------------------------------------------	|
-| credit.order.schema.json  	| V0.8            	| JSON schema for a credits order                 	|
-| credit.order.example.json 	| V0.8            	| Example payload corresponding to credits schema 	|
+| credits-purchase.schema.json  	| V0.8            	| JSON schema for a credits purchase                 	|
+| credits-purchase-individual.example.json 	| V0.8            	| Example credits purchase for individual 	|
+| credits-purchase-organisation.example.json 	| V0.8            	| Example credits purchase for organisation 	|
