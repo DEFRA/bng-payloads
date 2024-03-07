@@ -17,12 +17,8 @@
             },
             "role": {
               "description": "Role of the person completing the application.",
-              "examples": [
-                "Landowner",
-                "Ecologist",
-                "Developer"
-              ],
-              "type": "string"
+              "type": "string",
+              "enum": ["agent", "individual", "organisation"]
             }
           },
           "required": [
@@ -30,26 +26,54 @@
             "role"
           ]
         },
+        "isLandownerLeaseholder": {
+          "description": "Is the applicant (individual or organisation) or client of agent the landowner or leaseholder",
+          "type": "string",
+          "enum": ["yes", "no"]
+        },
         "organisation": {
           "type": "object",
           "properties": {
             "id": {
-              "description": "DefraID account identifier.",
-              "type": "string"
-            },
-            "type": {
-              "type": "string"
-            },
-            "dateOfIncorporation": {
-              "type": "string",
-              "format": "date"
-            },
-            "registeredAddress": {
+              "description": "DefraID organisation account identifier.",
               "type": "string"
             }
           },
           "required": [
             "id"
+          ]
+        },
+        "agent": {
+          "type": "object",
+          "properties": {
+            "clientType": {
+              "description": "Who the agent is representing, an individual or organisation",
+              "type": "string",
+              "enum": ["individual", "organisation"]
+            },
+            "clientNameIndividual": {
+              "description": "Name of client if individual",
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "firstName",
+                "lastName"
+              ]
+            },
+            "clientNameOrganisation": {
+              "description": "Name of client if organisation",
+              "type": "string"
+            }
+          },
+          "required": [
+            "clientType"
           ]
         },
         "habitats": {
@@ -127,38 +151,45 @@
             ]
           }
         },
-        "developmentDetails": {
-          "projectName": {
-            "description": "A name for the development project as assigned by the developer",
-            "maxLength": 255,
-            "type": "string"
-          },
-          "localAuthority": {
-            "description": "The name of the local planning authority",
-            "maxLength": 255,
-            "examples": [
-              "North West Leicestershire LPA",
-              "Lincoln LPA"
-            ],
-            "type": "string"
-          },
-          "planningReference": {
-            "type": "string"
-          },
-          "allocatedGainSites": {
-            "type": "array",
-            "items": {
+        "development": {
+          "type": "object",
+          "properties": {
+            "localPlanningAuthority": {
+              "description": "The local planning authority which issued the planning reference.",
               "type": "object",
               "properties": {
-                "gainSiteReference": {
+                "code": {
+                  "description": "The code of the local planning authority",
+                  "pattern": "^E60000[0-9]{3}$",
+                  "examples": [
+                    "E60000090",
+                    "E60000094"
+                  ],
+                  "type": "string"
+                },
+                "name": {
+                  "description": "The name of the local planning authority",
+                  "maxLength": 255,
+                  "examples": [
+                    "North West Leicestershire LPA",
+                    "Lincoln LPA"
+                  ],
                   "type": "string"
                 }
-              }
+              },
+              "required": ["code", "name"]
+            },
+            "planningReference": {
+              "description": "The planning reference for the project as assigned by the local planning authority",
+              "maxLength": 255,
+              "type": "string"
+            },
+            "name": {
+              "description": "A name for the development project as assigned by the developer",
+              "maxLength": 255,
+              "type": "string"
             }
           }
-        },
-        "referenceNumber": {
-          "type": "string"
         },
         "payment": {
           "type": "object",
@@ -183,11 +214,11 @@
       },
       "required": [
         "applicant",
+        "isLandownerLeaseholder",
         "habitats",
         "files",
-        "developmentDetails",
+        "development",
         "allocatedGainSites",
-        "referenceNumber",
         "submittedOn",
         "payment"
       ]

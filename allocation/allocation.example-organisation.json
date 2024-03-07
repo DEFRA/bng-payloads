@@ -1,0 +1,58 @@
+{
+  "developerRegistration": {
+    "applicant": {
+      "id": "123456",
+      "role": "organisation"
+    },
+    "organisation": {
+      "id": "987654321"
+    },
+    "isLandownerLeaseholder": "yes",
+    "habitats": {
+      "allocated": [
+        {
+          "allocatedHabitatId": "2",
+          "area": 0.9,
+          "module": "Created",
+          "state": "Habitat",
+          "deliveredUnits": 7.01,
+          "measurementUnits": "hectares"
+        }
+      ]
+    },
+    "files": [
+      {
+        "contentMediaType": "application/vnd.ms-excel.sheet.macroEnabled.12",
+        "fileType": "developer-upload-metric",
+        "fileSize": 5016056,
+        "fileLocation": "fb69298f-fbae-4a53-a691-64cd6540ba41/metric-upload/data.xlsm",
+        "fileName": "data.xlsm"
+      },
+      {
+        "contentMediaType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "fileType": "developer-planning-decision-notice",
+        "fileSize": 20821,
+        "fileLocation": "fb69298f-fbae-4a53-a691-64cd6540ba41/developer-upload-consent/Lorem ipsum dolor sit amet.docx",
+        "fileName": "Lorem ipsum dolor sit amet.docx"
+      }
+    ],
+    "development": {
+      "localPlanningAuthority": {
+        "code": "E60000090",
+        "name": "North West Leicestershire LPA"
+      },
+      "planningReference": "PLN12345",
+      "name": "Green Meadow Project"
+    },
+    "allocatedGainSites": [
+      {
+        "gainSiteReference": "BGS-111 222 333"
+      }
+    ],
+    "payment": {
+      "reference": "BNGREG-HRK8H-A9LVP",
+      "method": "BACS"
+    },
+    "submittedOn": "2023-02-16T13:30:12Z"
+  }
+}
