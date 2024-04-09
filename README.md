@@ -24,6 +24,6 @@ Repository to store Biodiversity Net Gains (BNG) payload schemas and examples.
 
 | File                      	| Current Version 	| Description                                     	|
 |---------------------------	|-----------------	|-------------------------------------------------	|
-| credits-purchase.schema.json  	| V0.8            	| JSON schema for a credits purchase                 	|
-| credits-purchase-individual.example.json 	| V0.8            	| Example credits purchase for individual 	|
-| credits-purchase-organisation.example.json 	| V0.8            	| Example credits purchase for organisation 	|
+| credit-purchaseschema.json  	| V0.9            	| JSON schema for a credits order                 	|
+| credit-purchase-individual.example.json 	| V0.9            	| Example payload corresponding to credits purchase by individual 	|
+| credit-purchase-organisation.example.json 	| V0.9            	| Example payload corresponding to credits purchase by organisation 	|

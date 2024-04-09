@@ -183,13 +183,22 @@
               ]
             }
           ]
+        },
+        "creditReference": {
+          "type": "string"
+        },
+        "submittedOn": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
         "applicant",
         "development",
         "products",
-        "files"
+        "files",
+        "creditReference",
+        "submittedOn"
       ]
     }
   },
