@@ -84,7 +84,7 @@
               "items": {
                 "type": "object",
                 "properties": {
-                  "allocatedHabitatId": {
+                  "habitatId": {
                     "type": "string"
                   },
                   "area": {
@@ -99,26 +99,23 @@
                     "type": "string",
                     "enum": ["Habitat", "Hedge", "Watercourse"]
                   },
-                  "deliveredUnits": {
-                    "description": "Number of biodiversity units delivered by this habitat",
-                    "type": "number"
-                  },
                   "measurementUnits": {
                     "type": "string",
                     "enum": ["hectares", "kilometres"]
                   }
                 },
                 "required": [
-                  "id",
+                  "habitatId",
                   "area",
-                  "deliveredUnits",
+                  "module",
+                  "state",
                   "measurementUnits"
                 ]
               }
             }
           },
           "required": [
-            "proposed"
+            "allocated"
           ]
         },
         "files": {
@@ -207,6 +204,9 @@
             "method"
           ]
         },
+        "allocationReference": {
+          "type": "string"
+        },
         "submittedOn": {
           "type": "string",
           "format": "date-time"
@@ -218,8 +218,9 @@
         "habitats",
         "files",
         "development",
-        "allocatedGainSites",
+        "gainSite",
         "submittedOn",
+        "allocationReference",
         "payment"
       ]
     }

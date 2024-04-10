@@ -12,15 +12,29 @@
         "lastName": "Smith"
       }
     },
+    "gainSite": {
+      "reference": "BGS-080324001",
+      "offsiteUnitChange": {
+        "habitat": 3.2,
+        "hedge": 2.6,
+        "watercourse": 0.0
+      }
+    },
     "habitats": {
       "allocated": [
         {
-          "allocatedHabitatId": "2",
+          "habitatId": "HAB-00001949-BX1W9",
           "area": 0.9,
           "module": "Created",
           "state": "Habitat",
-          "deliveredUnits": 7.01,
           "measurementUnits": "hectares"
+        },
+        {
+          "habitatId": "HAB-00001950-AB2Z6",
+          "area": 1.2,
+          "module": "Enhanced",
+          "state": "Hedge",
+          "measurementUnits": "kilometres"
         }
       ]
     },
@@ -62,15 +76,11 @@
       "planningReference": "PLN12345",
       "name": "Green Meadow Project"
     },
-    "allocatedGainSites": [
-      {
-        "gainSiteReference": "BGS-111 222 333"
-      }
-    ],
     "payment": {
       "reference": "BNGREG-HRK8H-A9LVP",
       "method": "BACS"
     },
+    "allocationReference": "BNGREG-HRK8H-A9LVP",
     "submittedOn": "2023-02-16T13:30:12Z"
   }
 }
