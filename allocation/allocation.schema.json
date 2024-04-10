@@ -76,6 +76,37 @@
             "clientType"
           ]
         },
+        "gainSite": {
+          "type": "object",
+          "properties": {
+            "reference": {
+              "type": "string"
+            },
+            "offsiteUnitChange": {
+              "type": "object",
+              "properties": {
+                "habitat": {
+                  "type": "number"
+                },
+                "hedge": {
+                  "type": "number"
+                },
+                "watercourse": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "habitat",
+                "hedge",
+                "watercourse"
+              ]
+            }
+          },
+          "required": [
+            "reference",
+            "offsiteUnitChange"
+          ]
+        },
         "habitats": {
           "type": "object",
           "properties": {
