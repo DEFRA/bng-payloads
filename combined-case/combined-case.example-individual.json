@@ -1,0 +1,197 @@
+{
+  "combinedCase": {
+    "applicant": {
+      "id": "123456",
+      "role": "individual"
+    },
+    "landownerAddress": {
+      "type": "uk",
+      "line1": "123 The Street",
+      "town": "York",
+      "postcode": "YO10 4BN"
+    },
+    "registrationDetails": {
+      "bgsNumber": "BGS-080324001",
+      "habitats": {
+        "baseline": [
+          {
+            "habitatType": "Cereal crops",
+            "baselineReference": "1",
+            "module": "Baseline",
+            "state": "Habitat",
+            "condition": "Condition Assessment N/A",
+            "area": {
+              "beforeEnhancement": 1.0,
+              "afterEnhancement": 1.0
+            },
+            "measurementUnits": "hectares"
+          },
+          {
+            "habitatType": "Modified grassland",
+            "baselineReference": "2",
+            "module": "Baseline",
+            "state": "Habitat",
+            "condition": "Moderate",
+            "area": {
+              "beforeEnhancement": 1.0,
+              "afterEnhancement": 2.0
+            },
+            "measurementUnits": "hectares"
+          }
+        ],
+        "proposed": [
+          {
+            "habitatId": "HAB-00001949-BX1W9",
+            "habitatType": "Cereal crops",
+            "baselineReference": "1",
+            "module": "Created",
+            "state": "Habitat",
+            "condition": "Fairly Good",
+            "strategicSignificance": "Area/compensation not in local strategy/ no local strategy",
+            "advanceCreation": 0,
+            "delayedCreation": 0,
+            "area": 1,
+            "measurementUnits": "hectares"
+          },
+          {
+            "habitatId": "HAB-00001950-AB2Z6",
+            "habitatType": "Modified grassland",
+            "baselineReference": "2",
+            "module": "Enhanced",
+            "state": "Habitat",
+            "condition": "Good",
+            "strategicSignificance": "Area/compensation not in local strategy/ no local strategy",
+            "advanceCreation": 0,
+            "delayedCreation": 0,
+            "area": 2.3,
+            "measurementUnits": "hectares"
+          }
+        ]
+      },
+      "files": [
+        {
+          "contentMediaType": "application/msword",
+          "fileType": "registration-legal-agreement",
+          "fileSize": 0.01,
+          "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/legal-agreement/legal-agreement.doc",
+          "fileName": "legal-agreement.doc"
+        },
+        {
+          "contentMediaType": "application/msword",
+          "fileType": "land-boundary",
+          "fileSize": 0.01,
+          "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/land-boundary/legal-agreement.doc",
+          "fileName": "legal-agreement.doc"
+        },
+        {
+          "contentMediaType": "application/msword",
+          "fileType": "management-plan",
+          "fileSize": 0.01,
+          "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/management-plan/legal-agreement.doc",
+          "fileName": "legal-agreement.doc"
+        },
+        {
+          "contentMediaType": "application/vnd.ms-excel.sheet.macroEnabled.12",
+          "fileType": "metric",
+          "fileSize": 5.39,
+          "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/metric-upload/new-metric-4.0.xlsm",
+          "fileName": "new-metric-4.0.xlsm"
+        },
+        {
+          "contentMediaType": "application/msword",
+          "fileType": "land-ownership",
+          "fileSize": 0.01,
+          "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/land-ownership/legal-agreement.doc",
+          "fileName": "legal-agreement.doc"
+        },
+        {
+          "contentMediaType": "application/msword",
+          "fileType": "local-land-charge",
+          "fileSize": 0.01,
+          "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/local-land-charge/local-land-charge.doc",
+          "fileName": "local-land-charge.doc"
+        }
+      ],
+      "landBoundaryGridReference": "SE170441",
+      "landBoundaryHectares": 2,
+      "landowners": {
+        "organisation": [
+          {
+            "organisationName": "org1"
+          }
+        ],
+        "individual": [
+          {
+            "firstName": "Geoffrey",
+            "middleNames": "Oliver",
+            "lastName": "Hopkin",
+            "email": "me@me.com"
+          }
+        ]
+      },
+      "legalAgreementType": "759150001",
+      "conservationCovernantResponsibleBodies": [
+        {
+          "responsibleBodyName": "body1"
+        },
+        {
+          "responsibleBodyName": "body2"
+        }
+      ],
+      "enhancementWorkStartDate": "2022-01-01T00:00:00.000Z",
+      "legalAgreementEndDate": "2023-01-01T00:00:00.000Z"
+    },
+    "allocationDetails": {
+      "gainSite": {
+        "reference": "BGS-080324001",
+        "offsiteUnitChange": {
+          "habitat": 3.2,
+          "hedge": 0.0,
+          "watercourse": 0.0
+        }
+      },
+      "habitats": {
+        "allocated": [
+          {
+            "habitatId": "HAB-00001949-BX1W9",
+            "area": 0.5
+          },
+          {
+            "habitatId": "HAB-00001950-AB2Z6",
+            "area": 2.3
+          }
+        ]
+      },
+      "files": [
+        {
+          "contentMediaType": "application/vnd.ms-excel.sheet.macroEnabled.12",
+          "fileType": "developer-upload-metric",
+          "fileSize": 5016056,
+          "fileLocation": "fb69298f-fbae-4a53-a691-64cd6540ba41/metric-upload/data.xlsm",
+          "fileName": "data.xlsm"
+        },
+        {
+          "contentMediaType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "fileType": "developer-planning-decision-notice",
+          "fileSize": 20821,
+          "fileLocation": "fb69298f-fbae-4a53-a691-64cd6540ba41/developer-upload-consent/Lorem ipsum dolor sit amet.docx",
+          "fileName": "Lorem ipsum dolor sit amet.docx"
+        }
+      ],
+      "development": {
+        "localPlanningAuthority": {
+          "code": "E60000090",
+          "name": "North West Leicestershire LPA"
+        },
+        "planningReference": "PLN12345",
+        "name": "Green Meadow Project"
+      }
+    },
+    "applicationReference": "BNGREG-HRK8H-A9LVP",
+    "submittedOn": "2023-09-08T08:42:25.804Z",
+    "payment": {
+      "reference": "BNGREG-HRK8H-A9LVP",
+      "method": "BACS"
+    }
+  }
+}

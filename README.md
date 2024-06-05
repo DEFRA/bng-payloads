@@ -25,5 +25,13 @@ Repository to store Biodiversity Net Gains (BNG) payload schemas and examples.
 | File                      	| Current Version 	| Description                                     	|
 |---------------------------	|-----------------	|-------------------------------------------------	|
 | credit-purchaseschema.json  	| V0.9            	| JSON schema for a credits order                 	|
-| credit-purchase-individual.example.json 	| V0.9            	| Example payload corresponding to credits purchase by individual 	|
-| credit-purchase-organisation.example.json 	| V0.9            	| Example payload corresponding to credits purchase by organisation 	|
+| credit-purchase.example-individual.json 	| V0.9            	| Example payload corresponding to credits purchase by individual 	|
+| credit-purchase.example-organisation.json 	| V0.9            	| Example payload corresponding to credits purchase by organisation 	|
+
+### Combined Case (Registration and Allocation)
+| File                          	| Current Version 	| Description                                    	|
+|-------------------------------	|-----------------	|------------------------------------------------	|
+| combined-case.schema.json        	| V0.1            	| JSON schema for a combined case payload 	|
+| combined-case.example-agent.json 	| V0.1            	| Example combined case payload for agent application  	|
+| combined-case.example-landowner.json 	| V0.1            	| Example combined case payload for landowner application  	|
+| combined-case.example-organisation.json 	| V0.1            	| Example combined case payload for organisation application  	|
