@@ -62,7 +62,6 @@
       "planningReference": "PLN12345",
       "name": "Green Meadow Project"
     },
-
     "payment": {
       "reference": "BNGREG-HRK8H-A9LVP",
       "method": "BACS"

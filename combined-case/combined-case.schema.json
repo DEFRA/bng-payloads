@@ -1,0 +1,634 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://biodiversitynetgain.naturalengland.gov.uk/registration.schema.json",
+  "title": "Biodiversity Net Gain Combined Registration and Allocation",
+  "description": "A combined registration and allocation for a Biodiversity Net Gain Application",
+  "type": "object",
+  "properties": {
+    "combinedCase": {
+      "type": "object",
+      "properties": {
+        "applicant": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "description": "DefraID account identifier.",
+              "type": "string"
+            },
+            "role": {
+              "description": "Role of the person completing the application.",
+              "type": "string",
+              "enum": ["agent", "individual", "organisation"]
+            }
+          },
+          "required": [
+            "id",
+            "role"
+          ]
+        },
+        "landownerAddress": {
+          "description": "Address of landowner/leaseholder, can be UK or International",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["uk", "international"]
+            },
+            "line1": {
+              "type": "string"
+            },
+            "line2": {
+              "type": "string"
+            },
+            "line3": {
+              "type": "string"
+            },
+            "town": {
+              "type": "string"
+            },
+            "postcode": {
+              "type": "string"
+            },
+            "county": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "line1",
+            "town"
+          ]
+        },
+        "organisation": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "description": "DefraID organisation account identifier.",
+              "type": "string"
+            },
+            "address": {
+              "description": "Address of organisation, can be UK or International",
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["uk", "international"]
+                },
+                "line1": {
+                  "type": "string"
+                },
+                "line2": {
+                  "type": "string"
+                },
+                "line3": {
+                  "type": "string"
+                },
+                "town": {
+                  "type": "string"
+                },
+                "postcode": {
+                  "type": "string"
+                },
+                "county": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "line1",
+                "town"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "address"
+          ]
+        },
+        "agent": {
+          "type": "object",
+          "properties": {
+            "clientType": {
+              "description": "Who the agent is representing, an individual or organisation",
+              "type": "string",
+              "enum": ["individual", "organisation"]
+            },
+            "clientNameIndividual": {
+              "description": "Name of client if individual",
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "firstName",
+                "lastName"
+              ]
+            },
+            "clientNameOrganisation": {
+              "description": "Name of client if organisation",
+              "type": "string"
+            },
+            "clientPhoneNumber": {
+              "description": "Phone number of client if individual",
+              "type": "string"
+            },
+            "clientEmail": {
+              "description": "Email of client if individual",
+              "type": "string"
+            },
+            "clientAddress": {
+              "description": "Address of client, can be UK or International",
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["uk", "international"]
+                },
+                "line1": {
+                  "type": "string"
+                },
+                "line2": {
+                  "type": "string"
+                },
+                "line3": {
+                  "type": "string"
+                },
+                "town": {
+                  "type": "string"
+                },
+                "postcode": {
+                  "type": "string"
+                },
+                "county": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "line1",
+                "town"
+              ]
+            }
+          },
+          "required": [
+            "clientType",
+            "clientAddress"
+          ]
+        },
+        "registrationDetails": {
+          "type": "object",
+          "properties": {
+            "bgsNumer": {
+              "type": "string"
+            },
+            "habitats": {
+              "type": "object",
+              "properties": {
+                "baseline": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "habitatType": {
+                        "type": "string"
+                      },
+                      "baselineReference": {
+                        "type": "string"
+                      },
+                      "module": {
+                        "type": "string",
+                        "enum": ["Baseline", "Created", "Enhanced"]
+                      },
+                      "state": {
+                        "type": "string",
+                        "enum": ["Habitat", "Hedge", "Watercourse"]
+                      },
+                      "condition": {
+                        "type": "string"
+                      },
+                      "area": {
+                        "type": "object",
+                        "properties": {
+                          "beforeEnhancement": {
+                            "type": "number"
+                          },
+                          "afterEnhancement": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "beforeEnhancement",
+                          "afterEnhancement"
+                        ]
+                      },
+                      "measurementUnits": {
+                        "type": "string",
+                        "enum": ["hectares", "kilometres"]
+                      }
+                    },
+                    "required": [
+                      "habitatType",
+                      "baselineReference",
+                      "condition",
+                      "area",
+                      "measurementUnits"
+                    ]
+                  }
+                },
+                "proposed": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "proposedHabitatId": {
+                        "type": "string"
+                      },
+                      "baselineReference": {
+                        "type": "string"
+                      },
+                      "module": {
+                        "type": "string",
+                        "enum": ["Baseline", "Created", "Enhanced"]
+                      },
+                      "state": {
+                        "type": "string",
+                        "enum": ["Habitat", "Hedge", "Watercourse"]
+                      },
+                      "habitatType": {
+                        "type": "string"
+                      },
+                      "condition": {
+                        "type": "string"
+                      },
+                      "strategicSignificance": {
+                        "type": "string"
+                      },
+                      "advanceCreation": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 30
+                      },
+                      "delayedCreation": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 30
+                      },
+                      "encroachmentExtent": {
+                        "type": "string"
+                      },
+                      "encroachmentExtentBothBanks": {
+                        "type": "string"
+                      },
+                      "area": {
+                        "description": "Area covered by the habitat.",
+                        "type": "number"
+                      },
+                      "measurementUnits": {
+                        "type": "string",
+                        "enum": ["hectares", "kilometres"]
+                      }
+                    },
+                    "required": [
+                      "proposedHabitatId",
+                      "baselineReference",
+                      "module",
+                      "state",
+                      "habitatType",
+                      "condition",
+                      "strategicSignificance",
+                      "advanceCreation",
+                      "delayedCreation",
+                      "area",
+                      "measurementUnits"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "baseline",
+                "proposed"
+              ]
+            },
+            "files": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "contentMediaType": {
+                    "type": "string"
+                  },
+                  "fileType": {
+                    "type": "string"
+                  },
+                  "fileSize": {
+                    "type": "number"
+                  },
+                  "fileLocation": {
+                    "type": "string"
+                  },
+                  "fileName": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "contentMediaType",
+                  "fileType",
+                  "fileSize",
+                  "fileLocation",
+                  "fileName"
+                ]
+              }
+            },
+            "landBoundaryGridReference": {
+              "type": "string"
+            },
+            "landBoundaryHectares": {
+              "type": "number"
+            },
+            "landowners": {
+              "type": "object",
+              "properties": {
+                "organisation": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "organisationName": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "organisationName"
+                    ]
+                  }
+                },
+                "individual": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "firstName": {
+                        "type": "string"
+                      },
+                      "middleNames": {
+                        "type": "string"
+                      },
+                      "lastName": {
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "firstName",
+                      "lastName",
+                      "email"
+                    ]
+                  }
+                }
+              }
+            },
+            "legalAgreementType": {
+              "type": "string",
+              "enum": ["759150000", "759150001", "759150002", "-1"]
+            },
+            "conservationCovernantResponsibleBodies": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "responsibleBodyName": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "responsibleBodyName"
+                ]
+              }
+            },
+            "planningObligationLPAs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "LPAName": {
+                    "type": "string"
+                  },
+                  "LPAId": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "LPAName",
+                  "LPAId"
+                ]
+              }
+            },
+            "enhancementWorkStartDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "legalAgreementEndDate": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": [
+            "bgsNumber",
+            "habitats",
+            "files",
+            "landBoundaryGridReference",
+            "landBoundaryHectares",
+            "landowners",
+            "legalAgreementType"
+          ]
+        },
+        "allocationDetails": {
+          "gainSite": {
+            "type": "object",
+            "properties": {
+              "reference": {
+                "type": "string"
+              },
+              "offsiteUnitChange": {
+                "type": "object",
+                "properties": {
+                  "habitat": {
+                    "type": "number"
+                  },
+                  "hedge": {
+                    "type": "number"
+                  },
+                  "watercourse": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "habitat",
+                  "hedge",
+                  "watercourse"
+                ]
+              }
+            },
+            "required": [
+              "reference",
+              "offsiteUnitChange"
+            ]
+          },
+          "habitats": {
+            "type": "object",
+            "properties": {
+              "allocated": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "habitatId": {
+                      "type": "string"
+                    },
+                    "area": {
+                      "description": "Area covered by the habitat.",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "habitatId",
+                    "area"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "allocated"
+            ]
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "contentMediaType": {
+                  "type": "string"
+                },
+                "fileType": {
+                  "type": "string"
+                },
+                "fileSize": {
+                  "type": "number"
+                },
+                "fileLocation": {
+                  "type": "string"
+                },
+                "fileName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "contentMediaType",
+                "fileType",
+                "fileSize",
+                "fileLocation",
+                "fileName"
+              ]
+            }
+          },
+          "development": {
+            "type": "object",
+            "properties": {
+              "localPlanningAuthority": {
+                "description": "The local planning authority which issued the planning reference.",
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "description": "The code of the local planning authority",
+                    "pattern": "^E60000[0-9]{3}$",
+                    "examples": [
+                      "E60000090",
+                      "E60000094"
+                    ],
+                    "type": "string"
+                  },
+                  "name": {
+                    "description": "The name of the local planning authority",
+                    "maxLength": 255,
+                    "examples": [
+                      "North West Leicestershire LPA",
+                      "Lincoln LPA"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": ["code", "name"]
+              },
+              "planningReference": {
+                "description": "The planning reference for the project as assigned by the local planning authority",
+                "maxLength": 255,
+                "type": "string"
+              },
+              "name": {
+                "description": "A name for the development project as assigned by the developer",
+                "maxLength": 255,
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "gainSite",
+            "habitats",
+            "files",
+            "development"
+          ]
+        },
+        "applicationReference": {
+          "type": "string"
+        },
+        "submittedOn": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "payment": {
+          "type": "object",
+          "properties": {
+            "reference": {
+              "type": "string"
+            },
+            "method": {
+              "type": "string",
+              "enum": ["BACS"]
+            }
+          },
+          "required": [
+            "reference",
+            "method"
+          ]
+        }
+      },
+      "required": [
+        "applicant",
+        "registrationDetails",
+        "allocationDetails",
+        "applicationReference",
+        "submittedOn",
+        "payment"
+      ]
+    }
+  },
+  "required": [
+    "combinedCase"
+  ]
+}
