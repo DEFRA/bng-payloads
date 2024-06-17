@@ -18,7 +18,7 @@
             "role": {
               "description": "Role of the person completing the application.",
               "type": "string",
-              "enum": ["agent", "individual", "organisation"]
+              "enum": ["agent", "landowner", "organisation"]
             }
           },
           "required": [

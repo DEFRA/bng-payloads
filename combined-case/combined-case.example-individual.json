@@ -2,7 +2,7 @@
   "combinedCase": {
     "applicant": {
       "id": "123456",
-      "role": "individual"
+      "role": "landowner"
     },
     "landownerAddress": {
       "type": "uk",
