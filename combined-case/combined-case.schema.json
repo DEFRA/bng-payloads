@@ -192,9 +192,6 @@
         "registrationDetails": {
           "type": "object",
           "properties": {
-            "bgsNumer": {
-              "type": "string"
-            },
             "habitats": {
               "type": "object",
               "properties": {
@@ -323,36 +320,6 @@
                 "proposed"
               ]
             },
-            "files": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "contentMediaType": {
-                    "type": "string"
-                  },
-                  "fileType": {
-                    "type": "string"
-                  },
-                  "fileSize": {
-                    "type": "number"
-                  },
-                  "fileLocation": {
-                    "type": "string"
-                  },
-                  "fileName": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "contentMediaType",
-                  "fileType",
-                  "fileSize",
-                  "fileLocation",
-                  "fileName"
-                ]
-              }
-            },
             "landBoundaryGridReference": {
               "type": "string"
             },
@@ -449,7 +416,6 @@
             }
           },
           "required": [
-            "bgsNumber",
             "habitats",
             "files",
             "landBoundaryGridReference",
@@ -462,9 +428,6 @@
           "gainSite": {
             "type": "object",
             "properties": {
-              "reference": {
-                "type": "string"
-              },
               "offsiteUnitChange": {
                 "type": "object",
                 "properties": {
@@ -486,7 +449,6 @@
               }
             },
             "required": [
-              "reference",
               "offsiteUnitChange"
             ]
           },
@@ -516,36 +478,6 @@
             "required": [
               "allocated"
             ]
-          },
-          "files": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "contentMediaType": {
-                  "type": "string"
-                },
-                "fileType": {
-                  "type": "string"
-                },
-                "fileSize": {
-                  "type": "number"
-                },
-                "fileLocation": {
-                  "type": "string"
-                },
-                "fileName": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "contentMediaType",
-                "fileType",
-                "fileSize",
-                "fileLocation",
-                "fileName"
-              ]
-            }
           },
           "development": {
             "type": "object",
@@ -593,6 +525,36 @@
             "files",
             "development"
           ]
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "contentMediaType": {
+                "type": "string"
+              },
+              "fileType": {
+                "type": "string"
+              },
+              "fileSize": {
+                "type": "number"
+              },
+              "fileLocation": {
+                "type": "string"
+              },
+              "fileName": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "contentMediaType",
+              "fileType",
+              "fileSize",
+              "fileLocation",
+              "fileName"
+            ]
+          }
         },
         "applicationReference": {
           "type": "string"
