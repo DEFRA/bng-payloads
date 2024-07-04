@@ -135,10 +135,10 @@
     "files": [
       {
         "contentMediaType": "application/msword",
-        "fileType": "agent-authorisation",
+        "fileType": "written-authorisation",
         "fileSize": 0.01,
-        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/agent-authorisation/agent-authorisation.doc",
-        "fileName": "agent-authorisation.doc"
+        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/written-authorisation/authorisation.doc",
+        "fileName": "authorisation.doc"
       },
       {
         "contentMediaType": "application/msword",
@@ -151,8 +151,8 @@
         "contentMediaType": "application/msword",
         "fileType": "land-boundary",
         "fileSize": 0.01,
-        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/land-boundary/legal-agreement.doc",
-        "fileName": "legal-agreement.doc"
+        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/land-boundary/land-boundary.doc",
+        "fileName": "land-boundary.doc"
       },
       {
         "contentMediaType": "application/vnd.ms-excel.sheet.macroEnabled.12",
@@ -165,8 +165,8 @@
         "contentMediaType": "application/msword",
         "fileType": "land-ownership",
         "fileSize": 0.01,
-        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/land-ownership/legal-agreement.doc",
-        "fileName": "legal-agreement.doc"
+        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/land-ownership/land-ownership.doc",
+        "fileName": "land-ownership.doc"
       },
       {
         "contentMediaType": "application/msword",
@@ -186,15 +186,15 @@
         "contentMediaType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
         "fileType": "developer-planning-decision-notice",
         "fileSize": 20821,
-        "fileLocation": "fb69298f-fbae-4a53-a691-64cd6540ba41/developer-upload-consent/Lorem ipsum dolor sit amet.docx",
-        "fileName": "Lorem ipsum dolor sit amet.docx"
+        "fileLocation": "fb69298f-fbae-4a53-a691-64cd6540ba41/developer-upload-consent/notice.docx",
+        "fileName": "notice.docx"
       },
       {
         "contentMediaType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
         "fileType": "developer-written-authorisation",
         "fileSize": 20821,
-        "fileLocation": "fb69298f-fbae-4a53-a691-64cd6540ba41/developer-upload-consent/Lorem ipsum dolor sit amet.docx",
-        "fileName": "Lorem ipsum dolor sit amet.docx"
+        "fileLocation": "fb69298f-fbae-4a53-a691-64cd6540ba41/developer-written-authorisation/authorisation.docx",
+        "fileName": "authorisation.docx"
       }
     ],
     "applicationReference": "BNGREG-HRK8H-A9LVP",
