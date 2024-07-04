@@ -135,10 +135,10 @@
     "files": [
       {
         "contentMediaType": "application/msword",
-        "fileType": "agent-authorisation",
+        "fileType": "written-authorisation",
         "fileSize": 0.01,
-        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/agent-authorisation/agent-authorisation.doc",
-        "fileName": "agent-authorisation.doc"
+        "fileLocation": "800376c7-8652-4906-8848-70a774578dfe/written-authorisation/authorisation.doc",
+        "fileName": "authorisation.doc"
       },
       {
         "contentMediaType": "application/msword",
